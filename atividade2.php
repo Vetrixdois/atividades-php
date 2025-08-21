@@ -22,10 +22,26 @@ if(isset($_GET['number'])){
 
     if($number%10 == 0 && $number%5 == 0 && $number%2 == 0){
         echo "<p>Seu número é divisel por 10, 5 e 2.</p>";
+    }elseif($number%10 == 0 && $number%5 == 0 && $number%2 !== 0){
+        echo "<p>Seu número é divisivel por 5 e 10.</p>";
+
+    }elseif($number%10 == 0 && $number%5 !== 0 && $number%2 == 0){
+        echo "<p>Seu número é divisel por 10 e 2.</p>";
+
+    }elseif($number%10 !== 0 && $number%5 == 0 && $number%2 == 0){
+        echo "<p>Seu número é divisel por 5 e 2.</p>";
+
+    }elseif($number%10 == 0 && $number%5 !== 0 && $number%2 !== 0){
+        echo "<p>Seu número é divisel por 10</p>";
+
+    }elseif($number%10 !== 0 && $number%5 !== 0 && $number%2 == 0){
+        echo "<p>Seu número é divisel por 2</p>";
+
+    }elseif($number%10 !== 0 && $number%5 == 0 && $number%2 !== 0){
+        echo "<p>Seu número é divisel por 5</p>";
+
     }else{
         echo "<p>Seu número não é divisel por 10, 5 e 2.</p>";
-    }elseif($number%10 == 0 && $number%5 == 0){
-        
     }
 }   
 
